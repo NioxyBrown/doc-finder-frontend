@@ -35,7 +35,7 @@ export default class DoctorMarker extends React.Component {
           icon={StethoscopeIcon}
         >
         { this.state.isOpen && this.state.activeMarker ?
-          <InfoWindow maxWidth={800} defaultPosition={ this.props.location } onCloseClick={this.props.onToggleOpen}>
+          <InfoWindow maxWidth={800} defaultPosition={ this.props.location } onCloseClick={this.toggleOpen}>
             <DoctorMapCard toggleShowPage={this.props.toggleShowPage} dr={this.props.doctor}/>
           </InfoWindow> : null
         }
